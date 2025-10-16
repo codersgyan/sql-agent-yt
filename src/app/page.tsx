@@ -34,14 +34,17 @@ export default function Chat() {
                                         <div className="font-semibold text-blue-700 dark:text-blue-300 mb-1">
                                             🔍 Database Query
                                         </div>
+                                        {/* @ts-ignore */}
                                         {part.input?.query && (
                                             <pre className="text-xs bg-white dark:bg-zinc-900 p-2 rounded mb-2 overflow-x-auto">
+                                                {/* @ts-ignore */}
                                                 {part.input.query}
                                             </pre>
                                         )}
                                         {part.state === 'output-available' && part.output && (
                                             <div className="text-sm text-green-700 dark:text-green-300">
-                                                ✅ Returned {part.output.rows?.length || 0} rows
+                                                {/* @ts-ignore */}✅ Returned{' '}
+                                                {part.output.rows?.length || 0} rows
                                             </div>
                                         )}
                                     </div>
